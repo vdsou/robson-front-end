@@ -3,7 +3,7 @@
 This robson bot web app will consume data from the robson API robot 🤖️
 Icons by:
 - [Smashicons](https://www.flaticon.com/br/autores/smashicons)
-- [Freepik](https://www.flaticon.com/br/)
+- [Freepik](https://www.freepik.com)
 
 made with ❤️ by [Valdir Souza (vdsou)](https://github.com/vdsou)
 
