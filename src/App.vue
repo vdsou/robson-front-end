@@ -1,20 +1,23 @@
 <template>
   <div id="app">
-    <Home />
+    <Header />
+    <Content />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Home from "./components/Home";
+import "./styles/global.css";
+// import Home from "./components/Home";
+import Header from "./components/Header";
+import Content from "./components/Content"
+import Footer from "./components/Footer"
 export default {
   name: "App",
   components: {
-    Home,
+    Header,
+    Content,
+    Footer
   },
 };
 </script>
-
-<style>
-#app {
-}
-</style>
