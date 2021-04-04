@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div id="footer-content" class="container">
-      <p>made with all love by vdsou</p>
+      <p>made with all love ❤️ by vdsou</p>
       <a href="">credits</a>
     </div>
   </footer>
