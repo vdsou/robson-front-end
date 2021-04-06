@@ -37,10 +37,10 @@ export default {
   },
   methods: {
     openMenu() {
-      return this.menuActive = true;
+      this.menuActive = true;
     },
     closeMenu() {
-      return this.menuActive = false;
+      this.menuActive = false;
     },
   },
 };
