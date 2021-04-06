@@ -20,9 +20,6 @@ export default {
 };
 </script>
 <style scoped>
-#content {
-  /* height: 70vh; */
-}
 #section-wrapper {
   height: 140px;
   border-bottom: solid 1px #428dff;

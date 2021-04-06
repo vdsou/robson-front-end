@@ -98,5 +98,6 @@ input {
 a {
   color: var(--general-blue);
   margin: 15px auto;
+  font-size: 12px;
 }
 </style>
