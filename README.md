@@ -5,6 +5,8 @@ Icons by:
 - [Smashicons](https://www.flaticon.com/br/autores/smashicons)
 - [Freepik](https://www.freepik.com)
 
+[UX/UI design](https://www.figma.com/file/rDhbo8PQ0HXoeEkZ7Wnl0V/ROBSONBOT?node-id=0%3A1)
+
 made with ❤️ by [Valdir Souza (vdsou)](https://github.com/vdsou)
 
 ## Project setup

@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import Home from "./Home";
+import Home from "../pages/Home";
 export default {
   name: "Content",
   components: {
