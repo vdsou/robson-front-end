@@ -1,15 +1,21 @@
 <template>
   <header>
     <nav class="container">
-      <a href="">
+      <a href="/home">
         <img
           src="../assets/logo.svg"
           id="logo"
           alt="Robsonbot"
-          title="Robsonbot"/>
+          title="Robsonbot"
+        />
       </a>
       <img src="../assets/rob-top.svg" id="robot-icon" alt="Robot Icon" />
-      <img v-on:click="openMenu" src="../assets/menu-icon.svg" id="menu-icon" alt="Open menu" />
+      <img
+        v-on:click="openMenu"
+        src="../assets/menu-icon.svg"
+        id="menu-icon"
+        alt="Open menu"
+      />
       <div id="nav-overlay" v-on:click="closeMenu" v-if="menuActive"></div>
       <div id="menu" :class="{ active: menuActive }">
         <div id="top">
@@ -17,11 +23,11 @@
           <img src="../assets/robot-menu.svg" alt="" />
         </div>
         <ul>
-          <li><a href="">Commands</a></li>
-          <li><a href="">Users</a></li>
-          <li><a href="">Settings</a></li>
-          <li><a href="">log out</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="/commands">Commands</a></li>
+          <li><a href="/users">Users</a></li>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="/logout">log out</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </div>
     </nav>
@@ -113,11 +119,33 @@ ul li {
 }
 
 @media (min-width: 700px) {
-  #menu.active, #menu-icon, #nav-overlay  {
+  #top,
+  #nav-overlay,
+  #menu-icon {
     display: none;
   }
-  #nav-overlay {
-    display: none;
+  #menu {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    position: static;
+    width: auto;
+    background: black;
+  }
+  ul {
+    display: flex;
+
+  }
+  ul li a {
+    color: var(--color-titles);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #menu, ul li {
+    background: var(--color-background);
+  }
+  #robot-icon{
+    width: 37px;
   }
 }
 </style>
