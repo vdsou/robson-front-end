@@ -2,7 +2,7 @@
   <footer>
     <div id="footer-content" class="container">
       <p>made with all love ❤️ by vdsou</p>
-        <a id="credits-title" href="#" v-on:click.prevent="toggleCredits">credits</a>
+        <a id="credits-title" href="" v-on:click.prevent="toggleCredits">credits</a>
       <div id="credits" v-if="showCredits" :class="{activeCredits: showCredits}">
         <div>
           Icons made by

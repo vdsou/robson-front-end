@@ -113,7 +113,7 @@ ul li {
 }
 
 @media (min-width: 700px) {
-  #menu {
+  #menu.active, #menu-icon, #nav-overlay  {
     display: none;
   }
   #nav-overlay {
