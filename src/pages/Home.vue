@@ -4,7 +4,7 @@
       <h1>robsonbot stats</h1>
       <div id="stats" class="container">
         <p>2 servers</p>
-        <p>25 commands</p>
+        <p>{{ statsData.Total }} commands</p>
         <p>750 requests</p>
         <p>100 hours up</p>
         <p>25 commands</p>
@@ -33,9 +33,20 @@
   </article>
 </template>
 <script>
+import api from "@/services/api";
 export default {
   name: "Home",
-  props: { msg: String },
+  props: { title: String },
+  data() {
+    return {
+      statsData: [],
+    };
+  },
+  mounted() {
+    api.get("/commands/get").then((res) => {
+      this.statsData = res.data;
+    });
+  },
 };
 </script>
 <style scoped>
@@ -68,10 +79,11 @@ h1 {
 }
 p {
   margin: 10px;
-  text-align: left;
+  text-align: center;
 }
 #form-container {
   border-top: solid 1px #428dff;
+  margin: 50px 0;
 }
 form {
   display: flex;
@@ -90,6 +102,7 @@ input,
 }
 input {
   padding-left: 15px;
+  color: var(--color-titles);
 }
 #submit {
   color: #000;
