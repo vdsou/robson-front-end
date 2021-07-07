@@ -6,17 +6,13 @@
         <h1>Hello, world! I am Robson the bot</h1>
       </section>
     </div>
-    <Home />
+    <router-view path="$router.key" title="<h1>hello</h1>"/>
   </div>
 </template>
 <script>
-import Home from "../pages/Home";
 export default {
   name: "Content",
-  components: {
-    Home: Home,
-  },
-  props: { content: String },
+  props: { title: String },
 };
 </script>
 <style scoped>

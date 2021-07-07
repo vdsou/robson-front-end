@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 :root {
   --color-background: #d1d8e0;
   --color-background-footer: #3867d6;
@@ -12,19 +12,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 html,
 body {
-    background: var(--color-background)
+  background: var(--color-background);
 }
-a{
-    text-decoration: none;
-    transition: 200ms opacity;
+a {
+  text-decoration: none;
+  transition: 200ms opacity;
 }
-a:hover{
-    opacity: 0.8;
+.header-page {
+  color: var(--general-blue);
+  background: #e5e5e5;
+  height: 73px;
+  padding-top: 11px;
 }
-.container{
-    width: 90%;
+a:hover {
+  opacity: 0.8;
+}
+.container {
+  width: 90%;
+}
+@media (min-width: 700px) {
+  h1,
+  p {
+    font-size: 16px !important;
+  }
 }

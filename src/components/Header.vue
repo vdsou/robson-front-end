@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="container">
-      <a href="/home">
+      <a href="/">
         <img
           src="../assets/logo.svg"
           id="logo"
