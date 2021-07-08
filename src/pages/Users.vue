@@ -1,13 +1,13 @@
 <template>
   <article>
     <div class="header-page">
-      <a href="">Manage commands</a>
+      <a href="">Manage Commands</a>
       <a href="">Manage users</a>
     </div>
-    <div id="commands-box">
+    <div id="users-box">
       <ul class="container">
-        <li v-for="(command, index) in commands" :key="index">
-          <a href="#">{{ command }}</a>
+        <li v-for="(user, index) in users" :key="index">
+          <a href="#">{{ user }}</a>
         </li>
       </ul>
     </div>
@@ -16,15 +16,15 @@
 <script>
 import api from "@/services/api";
 export default {
-  name: "Commands",
+  name: "Users",
   data() {
     return {
-      commands: [],
+      users: [],
     };
   },
   mounted() {
-    api.get("/commands/get").then((res) => {
-      this.commands = res.data.commands.map((item) => "!" + item.command);
+    api.get("/users/get").then((res) => {
+      this.users = res.data.users.map(item => item.userName)
     });
   },
 };
@@ -37,29 +37,31 @@ export default {
   font-size: 12px;
   line-height: 15.83px;
   display: block;
-  padding-bottom: 12px;
   color: var(--general-blue);
+  padding-bottom: 12px;
   cursor: pointer;
 }
 a:hover {
   text-decoration: underline;
 }
-#commands-box {
+#users-box {
   background: var(--general-blue);
   display: flex;
   justify-content: center;
 }
-#commands-box ul {
+#users-box ul {
   min-height: 100vh;
   padding: 2em 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto;
 }
-#commands-box ul li {
-  text-align: center;
+#users-box ul li {
+  /* background: tomato; */
+  height: 30px;
   margin-bottom: 13px;
+  text-align: center;
 }
-#commands-box ul li a {
+#users-box ul li a {
   color: var(--color-text-box);
   font-weight: bold;
   font-size: 15px;

@@ -6,7 +6,7 @@
         <h1>Hello, world! I am Robson the bot</h1>
       </section>
     </div>
-    <router-view path="$router.key" title="<h1>hello</h1>"/>
+    <router-view path="$router.key" title=""/>
   </div>
 </template>
 <script>
