@@ -1,7 +1,7 @@
 # robson-front-end
 
-This robson bot web app will consume data from the robson API robot 🤖️
-Icons by:
+## This robson bot web app will consume data from the robson API robot 🤖️
+### Icons by:
 - [Smashicons](https://www.flaticon.com/br/autores/smashicons)
 - [Freepik](https://www.freepik.com)
 
