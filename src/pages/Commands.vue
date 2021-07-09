@@ -7,7 +7,7 @@
     <div id="commands-box">
       <ul class="container">
         <li v-for="(command, index) in commands" :key="index">
-          <a href="#">{{ command }}</a>
+          <a :href="'command/' + command._id">!{{ command.command }}</a>
         </li>
       </ul>
     </div>
@@ -24,14 +24,14 @@ export default {
   },
   mounted() {
     api.get("/commands/get").then((res) => {
-      this.commands = res.data.commands.map((item) => "!" + item.command);
+      this.commands = res.data.commands;
     });
   },
 };
 </script>
 <style scoped>
 .header-page a {
-  width: 100%;
+  max-width: 120px;
   margin-left: 72px;
   font-weight: 400;
   font-size: 12px;
@@ -48,9 +48,9 @@ a:hover {
   background: var(--general-blue);
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 #commands-box ul {
-  min-height: 100vh;
   padding: 2em 0;
   display: grid;
   grid-template-columns: 1fr 1fr;

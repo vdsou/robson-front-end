@@ -35,6 +35,23 @@ a:hover {
 .container {
   width: 90%;
 }
+.buttons {
+  width: 138px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 25px;
+  background: var(--color-background-buttons);
+  color: var(--general-blue);
+  text-decoration: none !important;
+}
 @media (min-width: 700px) {
   h1,
   p {
