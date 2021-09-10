@@ -11,30 +11,14 @@
         <p>750 requests</p>
       </div>
     </div>
-    <div id="form-container">
-      <h1>If you are an admin please log in</h1>
-      <form action="">
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="USERNAME"
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="PASSWORD"
-        />
-        <button type="submit" id="submit">ENTER</button>
-        <a href="">sign in</a>
-      </form>
-    </div>
+    <Login v-if="!this.$store.state.user.isLogged"/>
   </article>
 </template>
 <script>
+import Login from "@/components/Login";
 import api from "@/services/api";
 export default {
+  components: { Login },
   name: "Home",
   props: { title: String },
   data() {
@@ -80,37 +64,5 @@ h1 {
 p {
   margin: 10px;
   text-align: center;
-}
-#form-container {
-  border-top: solid 1px #428dff;
-  margin: 50px 0;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-input,
-#submit {
-  width: 193px;
-  height: 32px;
-  background: #a5b1c2;
-  border: none;
-  margin-top: 20px;
-  color: #778ca3;
-}
-input {
-  padding-left: 15px;
-  color: var(--color-titles);
-}
-#submit {
-  color: #000;
-  cursor: pointer;
-}
-a {
-  color: var(--general-blue);
-  margin: 15px auto;
-  font-size: 12px;
 }
 </style>

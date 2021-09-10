@@ -1,8 +1,8 @@
 <template>
   <article>
     <div class="header-page">
-      <a href="">Manage commands</a>
-      <a href="">Manage users</a>
+      <a href="/manage/commands">Manage commands</a>
+      <a href="/manage/users">Manage users</a>
     </div>
     <div id="commands-box">
       <ul class="container">

@@ -1,8 +1,8 @@
 <template>
   <article>
     <div class="header-page">
-      <a href="/Manage">Manage commands</a>
-      <a href="/Manage">Manage users</a>
+      <a href="/manage/commands">Manage commands</a>
+      <a href="/manage/users">Manage users</a>
     </div>
     <div id="commands-box">
       <div class="container">
@@ -32,9 +32,8 @@ export default {
   },
   mounted() {
     this.id = this.$route.params.id;
-    api.get("/commands/getcommand/" + this.id).then((res) => {
-      this.command = res.data;
-      console.log(this.command);
+    api.get("/commands/getcommand/" + this.id).then((response) => {
+      this.command = response.data;
     });
   },
 };

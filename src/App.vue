@@ -8,7 +8,6 @@
 
 <script>
 import "./styles/global.css";
-// import Home from "./components/Home";
 import Header from "./components/Header";
 import Content from "./components/Content"
 import Footer from "./components/Footer"

@@ -1,13 +1,13 @@
 <template>
   <article>
     <div class="header-page">
-      <a href="">Manage Commands</a>
-      <a href="">Manage users</a>
+      <a href="/manage/commands">Manage Commands</a>
+      <a href="/manage/users">Manage users</a>
     </div>
     <div id="users-box">
       <ul class="container">
         <li v-for="(user, index) in users" :key="index">
-          <a href="#">{{ user }}</a>
+          <a href="#">{{ user.username }}</a>
         </li>
       </ul>
     </div>
@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     api.get("/users/get").then((res) => {
-      this.users = res.data.users.map(item => item.userName)
+      this.users = res.data.users
     });
   },
 };

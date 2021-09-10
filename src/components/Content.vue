@@ -6,13 +6,17 @@
         <h1>Hello, world! I am Robson the bot</h1>
       </section>
     </div>
-    <router-view path="$router.key" title=""/>
+    <router-view path="$router.key" title="" />
   </div>
 </template>
 <script>
 export default {
   name: "Content",
   props: { title: String },
+  created() {
+    const login = JSON.parse(localStorage.getItem("user"))
+    if(login) this.$store.dispatch("isLogged", true)
+  },
 };
 </script>
 <style scoped>
