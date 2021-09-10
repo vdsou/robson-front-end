@@ -8,6 +8,10 @@
   --color-text-box: #d1d8e0;
   --color-background-buttons: #c4c4c4;
 }
+#app,
+#content {
+  min-height: auto;
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +23,9 @@ html,
 body {
   background: var(--color-background);
 }
-a {
+a,
+input[type="button"],
+button {
   text-decoration: none;
   transition: 200ms opacity;
 }
@@ -29,8 +35,14 @@ a {
   height: 73px;
   padding-top: 11px;
 }
-a:hover {
+a:hover,
+input[type="button"]:hover,
+button:hover {
   opacity: 0.8;
+}
+textarea:focus,
+input:focus {
+  outline: none;
 }
 .container {
   width: 90%;
@@ -40,9 +52,18 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
-.buttons a {
+.fields {
+  margin: 25px 0;
+  padding: 5px;
+  width: clamp(60vw, 80vw, 100vw);
+  height: 25px;
+  background: var(--color-background-buttons);
+  color: var(--general-blue);
+  border: none;
+}
+.buttons a, button,
+input[type="button"] {
   display: flex;
   justify-content: center;
   align-items: center;

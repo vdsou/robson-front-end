@@ -23,22 +23,27 @@
           <img src="../assets/robot-menu.svg" alt="" />
         </div>
         <ul>
-          <li><a href="/commands">Commands</a></li>
-          <li><a href="/users">Users</a></li>
-          <li><a href="/settings">Settings</a></li>
-          <li><a href="/logout">log out</a></li>
-          <li><a href="/about">About</a></li>
+          <li><router-link to="/commands">Commands</router-link></li>
+          <li><router-link to="/users">Users</router-link></li>
+          <li><router-link to="/settings">Settings</router-link></li>
+          <li v-if="this.$store.state.user.isLogged">
+            <router-link to="/" @click.native="handleLogout">log out</router-link>
+          </li>
+          <li><router-link to="/about">About</router-link></li>
         </ul>
       </div>
     </nav>
   </header>
 </template>
 <script>
+// import AuthService from "@/services/authService";
+// const auth = AuthService;
 export default {
   name: "Header",
   data() {
     return {
       menuActive: false,
+      isLogged: false,
     };
   },
   methods: {
@@ -47,6 +52,9 @@ export default {
     },
     closeMenu() {
       this.menuActive = false;
+    },
+    async handleLogout() {
+      this.$store.dispatch("logout");
     },
   },
 };
@@ -134,17 +142,17 @@ ul li {
   }
   ul {
     display: flex;
-
   }
   ul li a {
     color: var(--color-titles);
     font-size: 16px;
     font-weight: bold;
   }
-  #menu, ul li {
+  #menu,
+  ul li {
     background: var(--color-background);
   }
-  #robot-icon{
+  #robot-icon {
     width: 37px;
   }
 }
