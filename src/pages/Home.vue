@@ -12,6 +12,7 @@
       </div>
     </div>
     <Login v-if="!this.$store.state.user.isLogged"/>
+    {{ $store.state.user.isLogged }}
   </article>
 </template>
 <script>
