@@ -19,16 +19,13 @@
       <button type="submit" id="submit">ENTER</button>
       <a href="/register">Sign in</a>
     </form>
-    {{ $store.state.user.isLogged }}
     <div class="message-content" v-if="message && status === false">
       {{ message }}
     </div>
   </div>
 </template>
 <script>
-// import AuthService from "@/services/authService";
 
-// const auth = AuthService;
 export default {
   name: "Login",
   data() {
@@ -45,16 +42,6 @@ export default {
         username: this.username,
         password: this.password,
       };
-      // const login = await auth.login(data);
-      // if (login.status != 200) {
-      //   this.status = false;
-      //   this.message = login.error;
-      // } else {
-      //   this.status = true;
-      //   this.$store.dispatch("setToken", login.data.token)
-      //   this.$router.push("/manage/commands")
-      // }
-
       this.$store.dispatch("login", data);
     },
   },
